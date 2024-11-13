@@ -1,0 +1,50 @@
+body {
+
+    background-image: url('images/greyzz.png');
+    display: flex;
+    justify-content: center;
+}
+
+#wrapper {
+    display: flex;
+    background-color: white;
+    width: 70vw;
+    justify-content: center;
+}
+
+#header {
+    display: flex;
+    position: absolute;
+    align-items: flex-end;
+    width: 70vw;
+    height: 55vh;
+    background-image: url('images/header.jpeg');
+    background-size:cover;
+    background-position:center;
+}
+
+#header h1 {
+    font-size: 90px;
+    margin: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+#posts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40vw;
+    height: 40vh;
+}
+
+.image-post {
+    border: 2px solid black;
+}
+
+
+
+
+
