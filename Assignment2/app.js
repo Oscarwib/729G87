@@ -17,29 +17,47 @@ const image = [
     'images/image8.jpg'
 ];
 
+
+
+
 const chosenImg = image.filter(src => !src.includes('-small'));
 
-const imageContainer = document.querySelector('.slides');
+const imageDisplay = document.querySelector('.slides');
 
 chosenImg.forEach(imageSrc => {
-    const img = document.createElement('img');
-    img.src = imageSrc;
-    img.classList.add('image');
-    imageContainer.appendChild(img);
+     const img = document.createElement('img');
+     img.src = imageSrc;
+     img.classList.add('image');
+ 
+     // Create a wrapper div for the image and overlay
+     const wrapper = document.createElement('div');
+     wrapper.classList.add('image-wrapper');
+ 
+     // Create the overlay box
+     const overlay = document.createElement('div');
+     overlay.classList.add('overlay');
+     overlay.textContent = imageSrc; // Set the text to the source path
+ 
+     // Append the image and overlay to the wrapper
+     wrapper.appendChild(img);
+     wrapper.appendChild(overlay);
+ 
+     // Append the wrapper to the slides container
+     imageDisplay.appendChild(wrapper);
 });
 
 
 let currentSlide = 0; //current index
-const slideImages = document.querySelectorAll('.image');
-slideImages[currentSlide].classList.add('active');
+const slideImages = document.querySelectorAll('.image-wrapper');
 const totalSlideImages = slideImages.length;
+updateDisplay();
 
 function updateDisplay() {
 
-    // måste börja med att en är active
+    // måste ändra så att det är wrappern som vi gör till active eller inactive
 
-    slideImages.forEach(img => img.classList.remove('active'))
-    slideImages[currentSlide].classList.add('active');
+    slideImages.forEach(img => img.classList.add('inActive'))
+    slideImages[currentSlide].classList.remove('inActive');
 
 }
 
