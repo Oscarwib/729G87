@@ -1,0 +1,29 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#dropdown {
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#square-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px;
+
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(246, 246, 120);
+    display: none; /* Hide squares by default */
+  }
+
+
