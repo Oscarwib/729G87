@@ -13,21 +13,23 @@
 
 <body>
     <div id="wrapper">
-        <div id="input-box" class = "section">
+        <div id="input-box" class="section">
             <textarea name="input" id="text-input" cols="30" rows="10">Once upon a time...</textarea>
-            <label for="style">Choose a style</label>
-            <select name="style" id="styling">
-                <option value="Red">Red</option>
-                <option value="Times New Roman">Times New Roman</option>
-                <option value="Green">Green</option>
-                <option value="Fantasy">Fantasy</option>
-            </select>
-            <input type="button" value="Change style" class="change-btn">
+            <div class="style-controls">
+                <label for="style">Choose a style</label>
+                <select name="style" id="styling">
+                    <option value="Red">Red</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Green">Green</option>
+                    <option value="Fantasy">Fantasy</option>
+                </select>
+                <input type="button" value="Change style" class="change-btn">
+            </div>
         </div>
 
-        <div id="output-box" class = "section">
-            <h1>Story</h1>
-            <div id="output-area"></div>
+        <div id="output-box" class="section">
+            <h1 id="heading">Story</h1>
+            <div id="output-area">Once upon a time...</div>
         </div>
 
     </div>
